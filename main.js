@@ -1,7 +1,7 @@
 
 const fs = require("fs");
 const readline = require("readline")
-
+PATH_TO_FILE = './database.txt' 
 
 const appendUserNameToFile = (name) => {
     
@@ -14,8 +14,8 @@ const appendUserNameToFile = (name) => {
         console.log('Error ocurred when writing to file: ' + err);
       }
     }
-
-    fs.appendFile('database.txt', record, errorHandler) 
+    
+    fs.appendFile(PATH_TO_FILE, record, errorHandler) 
 }
 
 
