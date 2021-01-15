@@ -1,12 +1,13 @@
 
 const fs = require("fs");
 const readline = require("readline")
-PATH_TO_FILE = './database.txt' 
+PATH_TO_FILE = './database.txt'
 
 const appendUserNameToFile = (name) => {
-    
-    var currenTimeStamp = Math.floor(Date.now() / 1000);
-    record = `\nUser ${name} logged at ${currenTimeStamp}\n`
+
+    var currentEpoch = Math.floor(Date.now() / 1000);
+    var currentTimeStamp = new Date(currentEpoch * 1000)
+    record = `\nUser ${name} logged in at ${currentTimeStamp}\n`
 
 
     errorHandler = err => {
@@ -14,8 +15,8 @@ const appendUserNameToFile = (name) => {
         console.log('Error ocurred when writing to file: ' + err);
       }
     }
-    
-    fs.appendFile(PATH_TO_FILE, record, errorHandler) 
+
+    fs.appendFile(PATH_TO_FILE, record, errorHandler)
 }
 
 
@@ -38,7 +39,3 @@ const rl = readline.createInterface(
 )
 
 rl.question("what is your name?", closeRLandAppendUserNameToFile)
-
-
-
-

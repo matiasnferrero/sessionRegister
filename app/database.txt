@@ -1,6 +1,2 @@
 
-User  user1  logged at 1610135629
-
-User  user2 logged at 1610135633
-
-User  matias logged at 1610152879
+User matias logged in at Fri Jan 15 2021 16:20:04 GMT+0100 (Central European Standard Time)
