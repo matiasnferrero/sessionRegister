@@ -22,12 +22,11 @@ const appendUserNameToFile = (name) => {
 
 
 const closeRLandAppendUserNameToFile = (name) => {
-    console.log("registering your name...");
+    console.log("registering your name and login details...");
     rl.close();
     appendUserNameToFile(name);
     console.log("completed.");
 }
-
 
 
 
